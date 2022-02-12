@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2022-02-12T20:03:46Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.5.2"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "soeng_proto_board_1"
+        },
+        "Owner": "Larry Pearlstein <pearlstl@tcnj.edu>",
+        "Size": {
+            "X": 86.34,
+            "Y": 37.77
+        }
+    }
+}
