@@ -7929,6 +7929,57 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="5010">
+<packages>
+<package name="TP_5010">
+<text x="-2.89905" y="2.33716875" size="1.27155" layer="25">&gt;NAME</text>
+<text x="-3.184590625" y="-3.49088125" size="1.273840625" layer="27">&gt;VALUE</text>
+<wire x1="-1.835" y1="1.835" x2="1.835" y2="1.835" width="0.05" layer="39"/>
+<wire x1="1.835" y1="1.835" x2="1.835" y2="-1.835" width="0.05" layer="39"/>
+<wire x1="1.835" y1="-1.835" x2="-1.835" y2="-1.835" width="0.05" layer="39"/>
+<wire x1="-1.835" y1="-1.835" x2="-1.835" y2="1.835" width="0.05" layer="39"/>
+<circle x="0" y="0" radius="1.585" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="1.585" width="0.127" layer="51"/>
+<pad name="1" x="0" y="0" drill="1.6"/>
+</package>
+</packages>
+<symbols>
+<symbol name="5010">
+<wire x1="-2.54" y1="2.54" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<text x="-2.54556875" y="3.181959375" size="1.781890625" layer="95">&gt;NAME</text>
+<text x="-2.545390625" y="-5.09078125" size="1.78178125" layer="96">&gt;VALUE</text>
+<pin name="1" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="5010" prefix="TP">
+<description>Test Point; Red; Thru-Hole; Snap-Fit; SilverPlate; 0.063in. Dia.; 0.445In. &lt;a href="https://pricing.snapeda.com/parts/5010/Laird%20Technologies/view-part?ref=eda"&gt;Check prices&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="5010" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TP_5010">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="Good"/>
+<attribute name="DESCRIPTION" value=" RF EMI Absorbing Sheet - Polyurethane Foam 24.000 (609.60mm) X 24.000 (609.60mm) X 0.252 (6.40mm) "/>
+<attribute name="MF" value="Laird Technologies"/>
+<attribute name="MP" value="5010"/>
+<attribute name="PACKAGE" value="SOIC-8 Laird Technologies"/>
+<attribute name="PRICE" value="None"/>
+<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/5010/?ref=eda"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7956,6 +8007,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="ZENER-DIODE" device="DO34-7" package3d_urn="urn:adsk.eagle:package:43364/1"/>
 <part name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="0207/9" package3d_urn="urn:adsk.eagle:package:6240935/1" value="10"/>
 <part name="C5" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="025-025X050" package3d_urn="urn:adsk.eagle:package:6240323/1"/>
+<part name="TP1" library="5010" deviceset="5010" device=""/>
+<part name="TP2" library="5010" deviceset="5010" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8014,6 +8067,14 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <instance part="C5" gate="G$1" x="-45.72" y="78.74" smashed="yes">
 <attribute name="NAME" x="-44.704" y="79.375" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-44.704" y="74.549" size="1.778" layer="96"/>
+</instance>
+<instance part="TP1" gate="G$1" x="27.94" y="86.36" smashed="yes" rot="R270">
+<attribute name="NAME" x="31.121959375" y="88.90556875" size="1.781890625" layer="95" rot="R270"/>
+<attribute name="VALUE" x="22.84921875" y="88.905390625" size="1.78178125" layer="96" rot="R270"/>
+</instance>
+<instance part="TP2" gate="G$1" x="-40.64" y="55.88" smashed="yes" rot="R90">
+<attribute name="NAME" x="-43.821959375" y="53.33443125" size="1.781890625" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-35.54921875" y="53.334609375" size="1.78178125" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -8100,8 +8161,11 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="17.78" y1="60.96" x2="17.78" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="-45.72" y1="73.66" x2="-45.72" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="-45.72" y1="60.96" x2="-30.48" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-45.72" y1="60.96" x2="-40.64" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-30.48" y="60.96"/>
+<pinref part="TP2" gate="G$1" pin="1"/>
+<wire x1="-40.64" y1="60.96" x2="-30.48" y2="60.96" width="0.1524" layer="91"/>
+<junction x="-40.64" y="60.96"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -8211,6 +8275,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="27.94" y1="81.28" x2="27.94" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="EXT_CLK_P2.7"/>
 <wire x1="27.94" y1="53.34" x2="33.02" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="TP1" gate="G$1" pin="1"/>
+<junction x="27.94" y="81.28"/>
 </segment>
 </net>
 <net name="N$11" class="0">
